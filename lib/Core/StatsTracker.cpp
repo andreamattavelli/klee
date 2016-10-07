@@ -9,6 +9,7 @@
 
 #include "StatsTracker.h"
 
+#include "klee/CommandLine.h"
 #include "klee/ExecutionState.h"
 #include "klee/Statistics.h"
 #include "klee/Config/Version.h"
@@ -199,6 +200,10 @@ StatsTracker::StatsTracker(Executor &_executor, std::string _objectFilename,
         "Both options --istats-write-interval and "
         "--istats-write-after-instructions cannot be enabled at the same "
         "time.");
+
+  if (!OutputIStats && OnlyOutputStatesCoveringNew)
+    klee_error("Option --only-output-states-covering-new requires "
+               "--output-stats.");
 
   KModule *km = executor.kmodule;
 

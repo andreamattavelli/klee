@@ -29,6 +29,8 @@ extern llvm::cl::opt<bool> UseForkedCoreSolver;
 
 extern llvm::cl::opt<bool> CoreSolverOptimizeDivides;
 
+extern llvm::cl::opt<bool> OnlyOutputStatesCoveringNew;
+
 ///The different query logging solvers that can switched on/off
 enum QueryLoggingSolverType
 {

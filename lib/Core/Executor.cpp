@@ -198,11 +198,6 @@ namespace {
 			       "as opposed to once per function (default=off)"));
 
   cl::opt<bool>
-  OnlyOutputStatesCoveringNew("only-output-states-covering-new",
-                              cl::init(false),
-			      cl::desc("Only output test cases covering new code (default=off)."));
-
-  cl::opt<bool>
   EmitAllErrors("emit-all-errors",
                 cl::init(false),
                 cl::desc("Generate tests cases for all errors "

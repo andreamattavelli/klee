@@ -64,6 +64,9 @@ CoreSolverOptimizeDivides("solver-optimize-divides",
                  llvm::cl::desc("Optimize constant divides into add/shift/multiplies before passing to core SMT solver (default=off)"),
                  llvm::cl::init(false));
 
+llvm::cl::opt<bool> OnlyOutputStatesCoveringNew(
+    "only-output-states-covering-new", llvm::cl::init(false),
+    llvm::cl::desc("Only output test cases covering new code (default=off)."));
 
 /* Using cl::list<> instead of cl::bits<> results in quite a bit of ugliness when it comes to checking
  * if an option is set. Unfortunately with gcc4.7 cl::bits<> is broken with LLVM2.9 and I doubt everyone

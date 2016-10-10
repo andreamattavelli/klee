@@ -1,3 +1,12 @@
+//===-- CommandLine.h -------------------------------------------*- C++ -*-===//
+//
+//                     The KLEE Symbolic Virtual Machine
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+
 /*
  * This header groups command line options declarations and associated data
  * that is common for klee and kleaver.

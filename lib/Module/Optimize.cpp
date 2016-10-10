@@ -2,9 +2,9 @@
 // Optimize.cpp. This stuff should live in common code.
 
 
-//===- Optimize.cpp - Optimize a complete program -------------------------===//
+//===- Optimize.cpp--------------------------------------------------------===//
 //
-//                     The LLVM Compiler Infrastructure
+//                     The KLEE Symbolic Virtual Machine
 //
 // This file is distributed under the University of Illinois Open Source
 // License. See LICENSE.TXT for details.

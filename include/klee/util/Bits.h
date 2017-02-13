@@ -54,6 +54,7 @@ namespace klee {
       if (x&0xF0F0F0F0) res += 4;
       if (x&0xCCCCCCCC) res += 2;
       if (x&0xAAAAAAAA) res += 1;
+      assert(res < 32);
       assert((UINT32_C(1) << res) == x);
       return res;
     } 
@@ -99,6 +100,7 @@ namespace klee {
       unsigned res = bits32::indexOfSingleBit((unsigned) (x | (x>>32)));
       if (x & ((uint64_t)0xFFFFFFFF << 32))
         res += 32;
+      assert(res < 64);
       assert((UINT64_C(1) << res) == x);
       return res;
     } 

@@ -1083,9 +1083,10 @@ public:
 #ifndef NDEBUG
     if (w <= 64)
       assert(v == bits64::truncateToNBits(v, w) && "invalid constant");
+#endif
     return alloc(v, w);
   }
-#endif
+
   static bool classof(const Expr *E) { return E->getKind() == Expr::Constant; }
   static bool classof(const ConstantExpr *) { return true; }
 

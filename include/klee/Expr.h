@@ -1080,7 +1080,8 @@ public:
   }
 
   static ref<ConstantExpr> create(uint64_t v, Width w) {
-    assert(v == bits64::truncateToNBits(v, w) && "invalid constant");
+    if (w <= 64)
+      assert(v == bits64::truncateToNBits(v, w) && "invalid constant");
     return alloc(v, w);
   }
 

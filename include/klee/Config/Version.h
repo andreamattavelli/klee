@@ -21,6 +21,12 @@
 #  define LLVM_TYPE_Q const
 #endif
 
+#if LLVM_VERSION_CODE >= LLVM_VERSION(3, 7)
+#  define KLEE_LLVM_GEP_TYPE(x) (x),
+#else
+#  define KLEE_LLVM_GEP_TYPE(x)
+#endif
+
 #if LLVM_VERSION_CODE >= LLVM_VERSION(4, 0)
 #  define KLEE_LLVM_CL_VAL_END
 #else

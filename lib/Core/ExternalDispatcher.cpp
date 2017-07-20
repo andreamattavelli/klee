@@ -331,6 +331,7 @@ Function *ExternalDispatcherImpl::createDispatcher(Function *target,
     LLVM_TYPE_Q Type *argTy =
         (i < FTy->getNumParams() ? FTy->getParamType(i) : (*ai)->getType());
     Instruction *argI64p = GetElementPtrInst::Create(
+        KLEE_LLVM_GEP_TYPE(nullptr)
         argI64s, ConstantInt::get(Type::getInt32Ty(ctx), idx), "", dBB);
 
     Instruction *argp =
